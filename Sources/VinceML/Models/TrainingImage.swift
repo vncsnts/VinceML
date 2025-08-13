@@ -18,7 +18,7 @@ import Foundation
 /// Uses deterministic UUID generation based on label and filename to ensure
 /// the same file always receives the same ID, enabling consistent references
 /// across app sessions without requiring persistent storage.
-public struct TrainingImage: Identifiable, Codable {
+public struct TrainingImage: Identifiable, Codable, Sendable {
     /// Unique identifier for this training image (deterministic based on label/filename)
     public let id: UUID
     
